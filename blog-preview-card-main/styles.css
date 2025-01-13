@@ -27,6 +27,13 @@
 body {
     font-family: 'Figtree', sans-serif;
     font-weight: 500;
+    background-color: var(--yellow, hsl(47, 88%, 63%));
+    color: var(--gray950, hsl(0, 0%, 7%));
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .attribution { 
     font-size: 11px; 
@@ -37,4 +44,46 @@ body {
 }
 .attribution a {
      color: hsl(228, 45%, 44%); 
+}
+
+/* Card */
+.card {
+    width: 350px;
+    background-color: var(--white, hsl(0, 0%, 100%));
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    box-shadow: 10px 10px 0 black;
+}
+.card-image {
+    border-radius: 0.5rem;
+}
+.card-label {
+    background-color: var(--yellow, hsl(47, 88%, 63%));
+    width: max-content;
+    padding: 5px 10px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+.card-heading {
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+.card-heading:hover {
+    color: var(--yellow, hsl(47, 88%, 63%));
+    cursor: pointer;
+}
+.card-description {
+    color: var(--gray500, hsl(0, 0%, 42%));
+}
+.card-author {
+    font-weight: 900;
+}
+.card-author-image {
+    width: 10%;
+    vertical-align: middle;
+    margin-right: 10px;
 }
