@@ -1,0 +1,50 @@
+/* Define the variable font */
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    /* Variables */
+    /* Primary Colors */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Neutral Colors */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: Dark gray blue: hsl(224, 30%, 27%);
+
+    /* Gradients*/
+    --background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --circle: linear-gradient(hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1));
+
+    /* Paragraph font size */
+    font-size: 18px;
+}
+body {
+    font-family: 'Hanken Grotesk', serif;
+    font-weight: 500;
+    height: 100vh;
+    position: relative;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
