@@ -41,6 +41,7 @@ body {
     padding: 1rem 0.2rem;
     background-color: rgb(241, 241, 238);
     position: relative;
+    min-height: 100vh;
 }
 .card {
     margin: 1rem;
@@ -151,9 +152,8 @@ body {
 
     body {
         padding: 0;
-        height: 100vh;
     }
-    body, .create {
+    body{
         display: flex;
         justify-content: center;
         align-items: center;
