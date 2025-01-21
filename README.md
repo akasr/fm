@@ -6,3 +6,4 @@ Solutions of the selected challenges provided by Frontend Mentors.
 2. [Results Summary Component](./results-summary-component/)
 3. [Bento Grid](./bento-grid/)
 4. [Fylo Data Storage Component](./fylo-data-storage/)
+5. [Clipboard Landing Page](./clipboard-landing-page/)
