@@ -1,83 +1,212 @@
 :root {
-    --strong-cyan: hsl(171, 66%, 44%);
-    --light-blue: hsl(233, 100%, 69%);
-    --dark-grayish-blue: hsl(210, 10%, 33%);
-    --grayish-blue: hsl(201, 11%, 66%);
-    font-size: 18px;
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+  --dark-grayish-blue: hsl(210, 10%, 33%);
+  --grayish-blue: hsl(201, 11%, 66%);
+  font-size: 18px;
 }
-*, *::after, *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-    font-family: "Bai Jamjuree", serif;
-    color: var(--grayish-blue, hsl(201, 11%, 66%));
+  font-family: "Bai Jamjuree", serif;
+  color: var(--grayish-blue, hsl(201, 11%, 66%));
+  text-align: center;
 }
-.attribution { 
-    font-size: 11px; 
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    padding: 10px; 
-    width: 100%;
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 /* Header */
-header {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    text-align: center;
-    padding: 1rem;
-    background: url(./images/bg-header-mobile.png)  no-repeat;
+header,
+main {
+  padding: 1rem;
 }
-h1, h2 {
-    color: var(--dark-grayish-blue, hsl(210, 10%, 33%));
-    font-weight: 600;
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: url(./images/bg-header-mobile.png) no-repeat;
+}
+h1,
+h2,
+h3 {
+  color: var(--dark-grayish-blue, hsl(210, 10%, 33%));
+  font-weight: 600;
 }
 header .action {
-    width: 100%;
+  width: 100%;
 }
 button {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 4rem;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: inherit;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4rem;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+}
+button:hover {
+    cursor: pointer;
 }
 button.green {
-    background-color: var(--strong-cyan, hsl(171, 66%, 44%));
-    box-shadow: 0 4px hsl(171, 66%, 38%)
+  background-color: var(--strong-cyan, hsl(171, 66%, 44%));
+  box-shadow: 0 4px hsl(171, 66%, 38%);
 }
 button.blue {
-    background-color: var(--light-blue, hsl(233, 100%, 69%));
-    box-shadow: 0 4px hsl(233, 60%, 57%);
+  background-color: var(--light-blue, hsl(233, 100%, 69%));
+  box-shadow: 0 4px hsl(233, 60%, 57%);
+}
+
+/* Main */
+main > section:not(:first-of-type) {
+  margin: 8rem 0;
+}
+.track *,
+.access *,
+.supercharge *,
+.companies ul *,
+.clipboard *,
+footer div * {
+  margin: 1rem 0;
+}
+.track img,
+.access img {
+  width: 100%;
+}
+.track article .image,
+.features article,
+.access img {
+  margin: 2rem 0;
+}
+ul {
+  list-style: none;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(247, 245, 245);
+  padding: 4rem;
+  position: relative;
+}
+ul a {
+  color: inherit;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+footer > div > img {
+  width: 3rem;
+  height: 3rem;
+}
+.socials li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 @media only screen and (min-width: 650px) {
-    header {
-        background: url(./images/bg-header-desktop.png)  no-repeat;
-    }
-    button {
-        display: inline-block;
-        width: max-content;
-        padding: 10px 1.3rem;
-        margin: 0 10px;
-    }
-    header .description {
-        width: 650px;
-        margin: 0 auto;
-    }
+  /* Header */
+  header {
+    background: url(./images/bg-header-desktop.png) no-repeat;
+    background-size: cover;
+  }
+  button {
+    display: inline-block;
+    width: max-content;
+    padding: 10px 1.3rem;
+    margin: 0 10px;
+  }
+  .description {
+    width: 650px;
+    margin: 0 auto;
+  }
+
+  /* Main */
+  /* 'Keep track of your snippets' section */
+  .track > article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .track .features {
+    width: 375px;
+    text-align: left;
+  }
+  .track .image {
+    position: relative;
+    left: -10%;
+  }
+  .track .features article {
+    margin: 3rem;
+  }
+
+  /* 'Access Clipboard Anywhere' section */
+  .access img {
+    width: 70%;
+  }
+
+  /* 'Supercharge your workflow' section */
+  .supercharge .features,
+  .companies ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  /* Companies section */
+  .companies ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* 'Clipboard for iOS and MAC OS */
+  .clipboard button {
+    margin: 10px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /* Footer */
+  footer > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+  }
+  footer > div div:last-of-type {
+    flex-basis: 30%;
+    justify-items: center;
+  }
 }
