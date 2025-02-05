@@ -38,4 +38,88 @@
 body {
   font-family: "PlusJakartaSans", sans-serif;
   font-size: 16px;
+  padding: 1rem;
+  font-weight: 500;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+h1 {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+.num-unread {
+  background-color: var(--blue, hsl(219, 85%, 26%));
+  color: var(--white, hsl(0, 0%, 100%));
+  padding: 0px 10px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+.mark-read {
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+  color: var(--dark-grayish-blue);
+  font-size: 0.9rem;
+}
+
+/* Notification */
+.notification {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  color: var(--grayish-blue);
+  font-size: 0.9rem;
+}
+.notification.unread {
+  background-color: var(--very-light-grayish-blue, hsl(210, 60%, 98%));
+}
+.dp img,
+.my-image img {
+  width: 2.4rem;
+}
+.data .name {
+  color: black;
+  margin-right: 2px;
+}
+.data .name,
+.data .post,
+.data .club {
+  font-weight: 800;
+}
+.data .post {
+  color: var(--dark-grayish-blue);
+  margin: 0 2px;
+}
+.data .club {
+  color: var(--blue);
+  margin-left: 2px;
+}
+.message {
+  border: 1px solid var(--grayish-blue);
+  border-radius: 2px;
+  margin-top: 1rem;
+  padding: 1rem;
+  color: var(--dark-grayish-blue);
+}
+.time {
+  color: rgb(163, 161, 161);
+  margin-top: 3px;
+}
+.unread p.description::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--red);
+  margin-left: 3px;
 }
