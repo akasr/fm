@@ -14,29 +14,61 @@
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
+  <header>
+    <h1>SPLI<br />TTER</h1>
+  </header>
 
-<!--  Bill-->
+  <main>
+    <div class="calculate">
 
-<!--  Select Tip %-->
-<!--  5%-->
-<!--  10%-->
-<!--  15%-->
-<!--  25%-->
-<!--  50%-->
-<!--  Custom-->
+      <div class="bill" id="bill">
+        <label for="totalBill" class="sub-heading">Bill</label>
+        <input type="number" id="totalBill" class="total-bill" placeholder="0"/>
+      </div>
 
-<!--  Number of People-->
+      <section class="tip-options">
+        <h2 class="sub-heading">Select Tip %</h2>
+        <div class="btn-group">
+          <button class="tip">5%</button>
+          <button class="tip">10%</button>
+          <button class="tip">15%</button>
+          <button class="tip">25%</button>
+          <button class="tip">50%</button>
+          <div class="custom">
+            <label for="custom">Custom</label>
+            <input type="number" class="custom-btn" id="custom"/>
+          </div>
+        </div>
+      </section>
 
-<!--  Tip Amount-->
-<!--  / person-->
+      <div class="num-people">
+        <label for="numPeople" class="sub-heading">Number of People</label>
+        <input type="number" id="numPeople" class="people-input" placeholder="0"/>
+      </div>
+    </div>
 
-<!--  Total-->
-<!--  / person-->
+    <section class="final-amount">
+      <h2 class="sr-only">Amount Per Person</h2>
+      <div class="amount-container">
+        <div>
+          <p class="amount-label">Tip Amount</p>
+          <p class="per-person">/ person</p>
+        </div>
+        <p class="amount" id="tipAmount">$0.00</p>
+      </div>
+      <div class="amount-container">
+        <div>
+          <p class="amount-label">Tip Amount</p>
+          <p class="per-person">/ person</p>
+        </div>
+        <p class="amount" id="totalAmount">$0.00</p>
+      </div>
+      <button class="reset selected" id="reset">RESET</button>
+    </section>
 
-<!--  Reset-->
-  
+  </main>
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Akash Raj</a>.
   </footer>
 </body>
