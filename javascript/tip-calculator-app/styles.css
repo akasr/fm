@@ -14,14 +14,179 @@
 }
 body {
     font-family: "Space Mono", serif;
-}
-form input {
-    font-size: 24px;
+    background-color: var(--light-grayish-cyan);
+    min-height: 100vh;
+    position: relative;
 }
 .attribution {
     font-size: 11px;
     text-align: center;
+    background-color: var(--white);
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* Heading */
+h1 {
+    color: var(--dark-grayish-cyan);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 10px;
+    padding: 3rem 0;
+    font-size: 1.6rem;
+}
+
+/* Main */
+main {
+    background-color: var(--white);
+    border-radius: 2rem 2rem 0 0;
+    padding: 2rem;
+    min-height: calc(100vh - 163px);
+}
+main .sub-heading {
+    color: var(--dark-grayish-cyan);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.calculate > div, .calculate section {
+    margin-bottom: 2rem;
+}
+
+/* Bill Section */
+label {
+    display: block;
+}
+input.total-bill, .people-input {
+    background-color: var(--very-light-grayish-cyan);
+    border: none;
+    display: block;
+    padding: 0.5rem;
+    font-family: inherit;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+}
+.bill {
+    position: relative;
+}
+.bill::after {
+    background-image: url('./images/icon-dollar.svg');
+}
+.bill::after, .num-people::after {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    background-color: var(--very-light-grayish-cyan);
+}
+
+/* Tip Options*/
+h2.sub-heading {
+    font-size: unset;
+    margin-bottom: 1rem;
+}
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.btn-group button.tip, .custom input {
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 4px 0;
+    font-family: inherit;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.btn-group button.tip {
+    background-color: var(--very-dark-cyan);
+    flex-basis: calc(50% - 0.5rem);
+    display: block;
+}
+button.tip.selected, button.selected {
+    background-color: var(--grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+.btn-group .custom {
+    flex-basis: calc(50% - 0.5rem);
+    position: relative;
+}
+.custom label {
+    position: absolute;
+    right: 1rem;
+    top: 4px;
+    color: var(--dark-grayish-cyan);
+    font-size: 24px;
+    font-weight: 700;
+}
+.custom input {
+    width: 100%;
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--dark-grayish-cyan);
+}
+
+/* Number of People Section*/
+.num-people {
+    position: relative;
+}
+.num-people::after {
+    background-image: url('./images/icon-person.svg');
+}
+
+/* Final Amount Section*/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.final-amount {
+    background-color: var(--very-dark-cyan);
+    padding: 2rem 1.2rem 1.2rem 1.2rem;
+    border-radius: 1rem;
+}
+.amount-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.amount-container div p {
+    font-weight: 700;
+}
+.amount {
+    color: var(--grayish-cyan);
+    font-weight: 700;
+    font-size: 24px;
+}
+.amount-label {
+    color: var(--white);
+}
+.per-person {
+    color: var(--strong-cyan);
+}
+.reset {
+    border: none;
+    padding: 0.5rem 0;
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
 }
