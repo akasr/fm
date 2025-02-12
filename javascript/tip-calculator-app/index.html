@@ -23,27 +23,28 @@
 
       <div class="bill" id="bill">
         <label for="totalBill" class="sub-heading">Bill</label>
-        <input type="number" id="totalBill" class="total-bill" placeholder="0"/>
+        <input type="number" id="totalBill" class="total-bill" placeholder="0" min="0"/>
       </div>
 
       <section class="tip-options">
         <h2 class="sub-heading">Select Tip %</h2>
         <div class="btn-group">
-          <button class="tip">5%</button>
-          <button class="tip">10%</button>
-          <button class="tip">15%</button>
-          <button class="tip">25%</button>
-          <button class="tip">50%</button>
+          <button class="tip" value="5">5%</button>
+          <button class="tip" value="10">10%</button>
+          <button class="tip" value="15">15%</button>
+          <button class="tip" value="25">25%</button>
+          <button class="tip" value="50">50%</button>
           <div class="custom">
-            <label for="custom">Custom</label>
-            <input type="number" class="custom-btn" id="custom"/>
+            <label for="custom" class="sr-only">Custom</label>
+            <input type="number" class="custom-btn" id="custom" placeholder="Custom" min="0"/>
           </div>
         </div>
       </section>
 
       <div class="num-people">
         <label for="numPeople" class="sub-heading">Number of People</label>
-        <input type="number" id="numPeople" class="people-input" placeholder="0"/>
+        <p class="error"></p>
+        <input type="number" id="numPeople" class="people-input" placeholder="0" min="0"/>
       </div>
     </div>
 
@@ -58,12 +59,12 @@
       </div>
       <div class="amount-container">
         <div>
-          <p class="amount-label">Tip Amount</p>
+          <p class="amount-label">Total</p>
           <p class="per-person">/ person</p>
         </div>
         <p class="amount" id="totalAmount">$0.00</p>
       </div>
-      <button class="reset selected" id="reset">RESET</button>
+      <button class="reset" id="reset" disabled>RESET</button>
     </section>
 
   </main>
@@ -71,5 +72,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Akash Raj</a>.
   </footer>
+
+  <script src="./calculate.js"></script>
 </body>
 </html>
