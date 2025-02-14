@@ -11,3 +11,4 @@ Solutions of the selected challenges provided by Frontend Mentors.
 ## HTML, CSS & JavaScript
 1. [Notifications Page](./javascript/notifications-page/)
 2. [Tip Calculator App](./javascript/tip-calculator-app/)
+3. [Calculator App](./javascript/calculator-app)
