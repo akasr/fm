@@ -74,7 +74,8 @@ button {
 header {
   height: 50%;
   text-align: center;
-  background: url(./images/bg-pattern.svg);
+  background: no-repeat center url(./images/bg-pattern.svg);
+  background-size: cover;
 }
 .header-container {
   padding: 30% 0;
@@ -251,8 +252,62 @@ input:checked + .toggle-slider:before {
   color: var(--color-pale-blue);
   padding: 0.7rem 2.5rem;
   border-radius: 25px;
+  cursor: pointer;
+}
+.sign-up:hover {
+  color: var(--color-white);
 }
 
-@media (min-width: 1440px) {
+@media only screen and (min-width: 767px) {
   /* Desktop styles */
+  header {
+    height: 60%;
+  }
+  .header-container {
+    padding: 12% 0;
+  }
+  .header-container p {
+    display: inline-block;
+  }
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  main {
+    top: 40%;
+    display: grid;
+    width: 500px;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    row-gap: 2rem;
+    grid-template-areas:
+      "page-views price"
+      "slider slider"
+      "billing billing"
+      "divider divider"
+      "features cta";
+    justify-content: space-between;
+  }
+  .page-views {
+    grid-area: page-views;
+  }
+  .slider-container {
+    grid-area: slider;
+  }
+  .pricing {
+    grid-area: price;
+  }
+  .billing {
+    grid-area: billing;
+  }
+  .features {
+    grid-area: features;
+  }
+  .divider {
+    grid-area: divider;
+  }
+  .sign-up {
+    grid-area: cta;
+  }
 }
