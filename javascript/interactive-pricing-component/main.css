@@ -116,7 +116,11 @@ main {
   height: 10px;
   border-radius: 5px;
   display: block;
-  background: var(--color-light-grayish-blue-1); /* Empty track color */
+  background: linear-gradient(to right, 
+      var(--color-soft-cyan) 0%, 
+      var(--color-soft-cyan) var(--slider-percentage), 
+      var(--color-light-grayish-blue-1) var(--slider-percentage), 
+      var(--color-light-grayish-blue-1) 100%); /* Empty track color */
   border: none;
   margin: 2rem 0;
 }
@@ -124,13 +128,21 @@ main {
 .slider::-webkit-slider-runnable-track {
   height: 10px;
   border-radius: 5px;
-  background: var(--color-light-grayish-blue-1);
+  background: linear-gradient(to right, 
+      var(--color-soft-cyan) 0%, 
+      var(--color-soft-cyan) var(--slider-percentage), 
+      var(--color-light-grayish-blue-1) var(--slider-percentage), 
+      var(--color-light-grayish-blue-1) 100%);
 }
 /* Track styling for Firefox */
 .slider::-moz-range-track {
   height: 10px;
   border-radius: 5px;
-  background: var(--color-light-grayish-blue-1);
+  background: linear-gradient(to right, 
+      var(--color-soft-cyan) 0%, 
+      var(--color-soft-cyan) var(--slider-percentage), 
+      var(--color-light-grayish-blue-1) var(--slider-percentage), 
+      var(--color-light-grayish-blue-1) 100%);
 }
 /* Thumb styling for WebKit browsers */
 .slider::-webkit-slider-thumb {
@@ -231,7 +243,7 @@ input:checked + .toggle-slider:before {
 .divider {
   width: calc(100% + 4rem);
   height: 1px;
-  background-color: var(--color-light-grayish-blue-1);
+  background-color: var(--color-light-grayish-blue-2);
 }
 
 /* Features */
@@ -272,22 +284,24 @@ input:checked + .toggle-slider:before {
   h1 {
     font-size: 1.7rem;
   }
-
+  .divider {
+    margin-left: -2rem;
+  }
   main {
     top: 40%;
     display: grid;
-    width: 500px;
+    width: 520px;
     margin: 0;
     left: 50%;
     transform: translateX(-50%);
     row-gap: 2rem;
+    column-gap: 0;
     grid-template-areas:
       "page-views price"
       "slider slider"
       "billing billing"
       "divider divider"
       "features cta";
-    justify-content: space-between;
   }
   .page-views {
     grid-area: page-views;
@@ -297,17 +311,24 @@ input:checked + .toggle-slider:before {
   }
   .pricing {
     grid-area: price;
+    text-align: right;
+    min-width: 260px;
+  }
+  .price {
+    display: inline-block;
   }
   .billing {
     grid-area: billing;
   }
   .features {
     grid-area: features;
+    width: 200px;
   }
   .divider {
     grid-area: divider;
   }
   .sign-up {
     grid-area: cta;
+    width: 100%;
   }
 }
