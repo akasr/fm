@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+    <meta
+      name="description"
+      content="Interactive pricing component with customizable page view options and billing frequency"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -25,11 +28,84 @@
       </div>
     </header>
 
-    <div class="attribution">
+    <main>
+      <!-- Slider to change page views -->
+      <p class="page-views"><span id="views">100</span>K PAGEVIEWS</p>
+      <div class="slider-container">
+        <input
+          type="range"
+          min="0"
+          max="200"
+          value="100"
+          class="slider"
+          id="myRange"
+          aria-label="Adjust page views"
+          aria-valuemin="0"
+          aria-valuemax="200"
+          aria-valuenow="100"
+        />
+      </div>
+
+      <!-- Pricing rate dependent on time period -->
+      <div class="pricing">
+        <p class="price-rate">
+          $<span id="price" class="price"></span> /
+          <span id="timeperiod">month</span>
+        </p>
+      </div>
+
+      <!-- Mothly or yearly billing rate -->
+      <div class="billing">
+        <p>Monthly Billing</p>
+        <label class="switch">
+          <input
+            type="checkbox"
+            id="billing"
+            aria-label="Toggle between monthly and yearly billing"
+          />
+          <span class="slider round"></span>
+        </label>
+        <p>Yearly Billing</p>
+        <p class="discount">-25%</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Features -->
+      <ul class="features">
+        <li class="feature">
+          <img src="./images/icon-check.svg" alt="check icon" /> Unlimited
+          Websites
+        </li>
+        <li class="feature">
+          <img src="./images/icon-check.svg" alt="check icon" /> 100% Data
+          Ownership
+        </li>
+        <li class="feature">
+          <img src="./images/icon-check.svg" alt="check icon" /> Email reports
+        </li>
+      </ul>
+
+      <!-- Button to sign up -->
+      <button class="sign-up" id="signUpBtn" aria-label="Start my trial">
+        Start my trial
+      </button>
+    </main>
+
+    <footer class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferrer"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+      >. Coded by
+      <a
+        href="https://www.frontendmentor.io/profile/akasr"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Akash Raj</a
+      >.
+    </footer>
   </body>
 </html>
